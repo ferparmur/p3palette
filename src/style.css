@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    --text-color:#f8f8f8;
+    --a-color: color(display-p3 1 0.37 0.62);
+    --background-color: color(display-p3 0.01 0.07 0.16 / 1);
+
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0 1rem;
+    line-height: 1.3;
+}
+
+body {
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Red Hat Display', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
+    font-size: min(9vw, 5rem);
+    margin: min(7vw, 4rem) 0 min(7vw, 3rem);
+    text-align: center;
+    line-height: 1.1;
+}
+
+@media (min-width: 800px) {
+    h1 {
+        /*margin-top: 3rem;*/
+    }
+}
+
+p {
+    margin: 1rem 0;
+}
+
+a {
+    color: var(--a-color);
+}
+
+.palette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    margin: min(10vw, 4rem) 0;
+}
+
+.color-card {
+    width: 100%;
+    display: block;
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 0 1.5rem;
+}
+
+@media (min-width: 600px) {
+    .color-card {
+        width: calc(50% - .66rem);
+    }
+}
+
+@media (min-width: 800px) {
+    .color-card {
+        width: calc(33% - .66rem);
+    }
+}
+
+
+.color {
+    width: 100%;
+    aspect-ratio: 2;
+    position: relative;
+}
+
+@media (min-width: 600px) {
+    .color {
+        aspect-ratio: 1.6;
+    }
+}
+
+.color-name {
+    font-size: 1rem;
+    margin: 0;
+    padding: .3rem .5rem;
+    display: inline-block;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 black;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.color .rgb {
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.rgb-notice {
+    margin: 0;
+    font-size: .8rem;
+    padding: .2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+.code-snippet {
+    border-top: 1px solid var(--text-color);
+    padding: .3rem;
+    line-height: 1;
+    display: flex;
+}
+
+.code-snippet input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    color: rgba(255,255,255, .8);
+    font-family: monospace;
+    font-size: .7rem;
+    border-radius: 0;
+}
+
+.copy-button {
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+    background: rgba(255,255,255, .2);
+    text-transform: uppercase;
+    font-style: italic;
+    color: var(--text-color);
+    margin-left: .5rem;
+    padding: .4rem .4rem .4rem .3rem;
+    cursor: pointer;
+}
+
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, .3);
+    padding-top: 2rem;
+    margin: min(7vw, 4rem) 0 min(7vw, 3rem);
+    text-align: center;
+    font-size: .8rem;
+    opacity: .5;
+}
+
+footer a {
+    color: rgba(255, 255, 255, .7);
+}
+
+.x-separator {
+    margin: 0 1rem;
+}

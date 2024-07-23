@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <style>
+        {{css}}
+    </style>
+</head>
+<body>
+<header>
+    <h1>Vibrant Colors✨<br> for the Web</h1>
+
+    <p>
+        Unlock colors that you didn't know you could see in a screen. A lot of modern devices support the P3 gamut which
+        contains 25% colors than traditional RGB. This site compares the new vibrant shades you can use with their traditional,
+        more muted equivalents.
+        <a target="_blank" href="https://css-tricks.com/the-expanding-gamut-of-color-on-the-web/">Learn more about it here</a>.
+    </p>
+</header>
+
+<main>
+    <ul class="palette">
+        {{#each colors}}
+            <li class="color-card">
+                <div class="color" style="background: color(display-p3 {{this.r}} {{this.g}} {{this.b}} / 1)">
+                    <h3 class="color-name">{{this.name}}</h3>
+                    <div class="rgb" style="background: rgb( {{toHex this.r}} {{toHex this.g}} {{toHex this.b}} )">
+                        <p class="rgb-notice">RGB Equivalent</p>
+                    </div>
+                </div>
+                <div class="code-snippet">
+                    <input type="text" readonly value="background: color(display-p3 {{this.r}} {{this.g}} {{this.b}} / 1)" />
+                    <button class="copy-button">Copy</button>
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</main>
+
+<footer>
+    Made by <a href="https://www.fparedes.com" target="_blank">Fernando Paredes</a> <span class="x-separator">🌈</span> Source code on <a href="https://github.com/ferparmur/p3palette" target="_blank">Github
+</footer>
+
+<script>
+    const buttons = document.getElementsByClassName('copy-button');
+
+    for (const button of buttons) {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            const input = e.target.parentElement.getElementsByTagName('input')[0];
+            copy(input);
+        });
+    }
+
+    function copy(input){
+        // Select the text field
+        input.select();
+        input.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(input.value);
+
+        // Alert the copied text
+        alert("Copied the text: " + input.value);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+#Editor
+.idea
+
+#Build
+build
+
+#Dependencies
+node_modules
+
+#System
+.DS_Store

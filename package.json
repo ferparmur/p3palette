@@ -1,0 +1,19 @@
+{
+  "name": "p3palette",
+  "version": "1.0.0",
+  "description": "A sample of the new vibrant colors for the web",
+  "main": "index.js",
+  "watch": {
+    "build": "src/*.*"
+  },
+  "scripts": {
+    "watch": "npm-watch",
+    "build": "node build.js"
+  },
+  "author": "Fernando Paredes Murillo",
+  "license": "ISC",
+  "devDependencies": {
+    "handlebars": "^4.7.8",
+    "npm-watch": "^0.13.0"
+  }
+}

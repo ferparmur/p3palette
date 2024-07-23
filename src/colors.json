@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Rosest",
+    "r": 1,
+    "g": 0.05,
+    "b": 0.45
+  },
+  {
+    "name": "Sour Lime",
+    "r": 0,
+    "g": 1,
+    "b": 0
+  },
+  {
+    "name": "Ultra Turquoise",
+    "r": 0,
+    "g": 1,
+    "b": 0.701
+  },
+  {
+    "name": "Hot Coral",
+    "r": 0.96,
+    "g": 0.34,
+    "b": 0.27
+  },
+  {
+    "name": "Super Red",
+    "r": 1,
+    "g": 0,
+    "b": 0
+  },
+  {
+    "name": "Robins Blue",
+    "r": 0.17,
+    "g": 0.68,
+    "b": 1
+  },
+  {
+    "name": "Super Blue",
+    "r": 0,
+    "g": 0,
+    "b": 1
+  },
+  {
+    "name": "Equinox Green",
+    "r": 0.24,
+    "g": 1,
+    "b": 0.52
+  },
+  {
+    "name": "Anouk Rose",
+    "r": 1,
+    "g": 0.64,
+    "b": 1
+  },
+  {
+    "name": "Super Green",
+    "r": 0,
+    "g": 1,
+    "b": 0
+  },
+  {
+    "name": "Super Yellow",
+    "r": 1,
+    "g": 1,
+    "b": 0
+  },
+  {
+    "name": "Super Fuchsia",
+    "r": 1,
+    "g": 0,
+    "b": 1
+  }
+]
