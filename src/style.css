@@ -10,7 +10,7 @@ html {
 
     background: var(--background-color);
     color: var(--text-color);
-    font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     font-size: 18px;
     margin: 0;
     padding: 0 1rem;
@@ -134,7 +134,7 @@ a {
     background: transparent;
     border: 0;
     color: rgba(255,255,255, .8);
-    font-family: monospace;
+    font-family: 'Courier New', monospace;
     font-size: .7rem;
     border-radius: 0;
 }

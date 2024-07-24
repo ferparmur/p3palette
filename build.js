@@ -3,6 +3,7 @@ const handlebars = require('handlebars');
 
 handlebars.registerHelper("toHex", color => Math.round(color * 255));
 
+
 function render(filename, data)
 {
   const source = fs.readFileSync(filename,'utf8').toString();
@@ -19,3 +20,4 @@ if (!fs.existsSync('build')){
   fs.mkdirSync('build');
 }
 fs.writeFileSync('build/index.html', result);
+fs.copyFileSync('./src/icon.png', './build/icon.png')
