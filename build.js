@@ -20,4 +20,4 @@ if (!fs.existsSync('build')){
   fs.mkdirSync('build');
 }
 fs.writeFileSync('build/index.html', result);
-fs.copyFileSync('./src/icon.png', './build/icon.png')
+fs.copyFileSync('./src/icon.svg', './build/icon.svg')
