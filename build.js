@@ -2,6 +2,7 @@ const fs = require('fs');
 const handlebars = require('handlebars');
 
 handlebars.registerHelper("toHex", color => Math.round(color * 255));
+handlebars.registerHelper("toInverted", color => Math.round((1 - color)*100)/100);
 
 
 function render(filename, data)

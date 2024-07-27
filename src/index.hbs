@@ -27,17 +27,20 @@
 <main>
     <ul class="palette">
         {{#each colors}}
-            <li class="color-card">
-                <div class="color" style="background: color(display-p3 {{this.r}} {{this.g}} {{this.b}} / 1)">
-                    <h3 class="color-name">{{this.name}}</h3>
-                    <div class="rgb" style="background: rgb( {{toHex this.r}} {{toHex this.g}} {{toHex this.b}} )">
-                        <p class="rgb-notice">RGB Equivalent</p>
+            <li class="color-tile">
+                <h3 class="color-name">{{this.name}}</h3>
+                <div class="color-card">
+                    <div class="color" style="background: color(display-p3 {{this.r}} {{this.g}} {{this.b}} / 1)">
+                        <div class="rgb" style="background: rgb( {{toHex this.r}} {{toHex this.g}} {{toHex this.b}} )">
+                            <p class="rgb-notice">RGB Equivalent</p>
+                        </div>
+                    </div>
+                    <div class="code-snippet">
+                        <input type="text" readonly value="background: color(display-p3 {{this.r}} {{this.g}} {{this.b}} / 1)" />
+                        <button class="copy-button">Copy</button>
                     </div>
                 </div>
-                <div class="code-snippet">
-                    <input type="text" readonly value="background: color(display-p3 {{this.r}} {{this.g}} {{this.b}} / 1)" />
-                    <button class="copy-button">Copy</button>
-                </div>
+
             </li>
         {{/each}}
     </ul>

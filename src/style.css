@@ -58,25 +58,43 @@ a {
     margin: min(10vw, 4rem) 0;
 }
 
-.color-card {
-    width: 100%;
+.palette:has(.color-tile:hover) .color-tile:not(:hover) {
+    opacity: .7;
+}
+
+.color-tile {
     display: block;
-    border: 1px solid var(--text-color);
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 0 0 1.5rem;
+    width: 100%;
+    transition: .4s;
 }
 
 @media (min-width: 600px) {
-    .color-card {
+    .color-tile {
         width: calc(50% - .66rem);
     }
 }
 
 @media (min-width: 800px) {
-    .color-card {
+    .color-tile {
         width: calc(33% - .66rem);
     }
+}
+
+
+.color-name {
+    font-size: 1rem;
+    margin: .2rem 0;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.color-card {
+    width: 100%;
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 0 1.5rem;
 }
 
 
@@ -92,17 +110,6 @@ a {
     }
 }
 
-.color-name {
-    font-size: 1rem;
-    margin: 0;
-    padding: .3rem .5rem;
-    display: inline-block;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 0 black;
-    font-style: italic;
-    font-weight: 700;
-}
-
 .color .rgb {
     width: 50%;
     height: 50%;
@@ -114,12 +121,16 @@ a {
 .rgb-notice {
     margin: 0;
     font-size: .8rem;
-    padding: .2rem;
+    padding: .2rem .3rem;
     position: absolute;
     bottom: 0;
     right: 0;
-    font-style: italic;
     text-transform: lowercase;
+    border-top-left-radius: 5px;
+    border: 1px solid var(--text-color);
+    border-bottom: 0;
+    border-right: 0;
+    background: rgb(0,0,0,.3);
 }
 
 .code-snippet {
